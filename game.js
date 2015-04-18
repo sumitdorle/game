@@ -16,6 +16,7 @@ function create(){
     shark.body.acceleration.y = 200;
     shark.body.collideWorldBounds = true;
     shark.body.drag.x = 100;
+    shark.anchor.setTo(0.5, 1);
     
     
 cursors = game.input.keyboard.createCursorKeys();
@@ -29,12 +30,15 @@ function update(){
 
 function moveshark(shark)
 {
-    if(cursors.left.isDown) {
-      shark.body.velocity.x = -50;
-      shark.scale.x = -1;
+    if(cursors.up.isDown) {
+      shark.body.velocity.y = -100;
     }
     else if(cursors.right.isDown) {
       shark.body.velocity.x = 50;
       shark.scale.x = 1;
     }
+    else if (cursors.left.isDown){
+      shark.body.velocity.x = -50;
+      shark.scale.x = -1;  
+    }    
 }
