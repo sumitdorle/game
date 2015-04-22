@@ -33,6 +33,7 @@ function preload(){
 
 
 function create(){
+    game.stage.backgroundColor = '#c0d6e4';
     game.physics.startSystem(Phaser.Physics.ARCADE);
     
     //shark
